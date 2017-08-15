@@ -194,7 +194,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
         contentView.addSubview(bodyLabel)
         
         // close button
-        closeButton.setTitle("Close".localized, for: .normal)
+        closeButton.setTitle("PermissionScopeCloseTitle".localized, for: .normal)
         closeButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
         closeButton.accessibilityIdentifier = "permissionscope.closeButton"
         
