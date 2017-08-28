@@ -249,14 +249,12 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
         bodyLabel.frame.offsetInPlace(dx: -contentView.frame.origin.x, dy: -contentView.frame.origin.y)
         bodyLabel.frame.offsetInPlace(dx: 0, dy: -((dialogHeight/2)-100))
         
-        closeButton.center = contentView.center
-        closeButton.frame.offsetInPlace(dx: -contentView.frame.origin.x, dy: -contentView.frame.origin.y)
-        closeButton.frame.offsetInPlace(dx: 105, dy: -((dialogHeight/2)-20))
-        closeButton.frame.offsetInPlace(dx: self.closeOffset.width, dy: self.closeOffset.height)
         if let _ = closeButton.imageView?.image {
             closeButton.setTitle("", for: .normal)
         }
         closeButton.setTitleColor(closeButtonTextColor, for: .normal)
+        closeButton.sizeToFit()
+        closeButton.frame.origin.x = max(0, contentView.bounds.size.width - closeButton.frame.size.width - 12)
         
         let baseOffset = 95
         var index = 0
