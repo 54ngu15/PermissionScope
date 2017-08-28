@@ -379,6 +379,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
         label.textAlignment = .center
         label.text = permissionMessages[type]
         label.textColor = permissionLabelColor
+        label.adjustsFontSizeToFitWidth = true
         
         return label
     }
