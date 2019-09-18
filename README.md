@@ -42,7 +42,6 @@ Supported permissions:
 * Camera
 * Photos
 * Reminders
-* Bluetooth
 * Motion
 
 ## compatibility
@@ -205,12 +204,6 @@ Users will get the prompt to enable notifications when using PermissionScope but
 Trickiest part of implementing location permissions? You must implement the proper key in your Info.plist file with a short description of how your app uses location info (shown in the system permissions dialog). Without this, trying to get location  permissions will just silently fail. *Software*!
 
 Use `NSLocationAlwaysUsageDescription` or `NSLocationWhenInUseUsageDescription` where appropriate for your app usage. You can specify which of these location permissions you wish to request with `.LocationAlways` or `.LocationInUse` while configuring PermissionScope.
-
-### bluetooth
-
-The *NSBluetoothPeripheralUsageDescription* key in the Info.plist specifying a short description of why your app needs to act as a bluetooth peripheral in the background is **optional**.
-
-However, enabling `background-modes` in the capabilities section and checking the `acts as a bluetooth LE accessory` checkbox is **required**.
 
 ## known bugs
 
